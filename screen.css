@@ -1,0 +1,34 @@
+/* File organization rules: Congifuration goes at the top,
+then your "general" elements, i.e. what affects all your
+paragraphs, headers, etc. Then if it's mors specific it goes
+below that. Then, media/browser rules, to give it rules for when
+the size changes (Not focusing on media changes this term) */
+
+/* Selector- Something that can select an element */
+h1{
+    /* property: value */
+    color: navy; /* declaration */
+}
+h2{
+    border-bottm: 2px solid #fff;
+    font-style: italic;
+}
+body { font-family: Arital, sans-serif; }
+/* Class selector */
+.base_color { color: blue; }
+/* Descendant selector- In this case, the lists are only 
+affected if they're within a main element */
+main li { font-size: 90%;}
+/* Adjacent sibling selector- This means it grabs anything 
+immediately after the first selected element */
+h2+p {font-size: 90%}
+/* Multiple Selectors- You can select multiple
+elements at once */
+h1, h2, h3 {color: blue;}
+p, ul.speakers, li {font-family: 'Times New Roman', Times, serif}
+/* Pseudo selector examples */
+a:link {color: green}
+/* More than 1 style sheet can be implemented, the
+cascade determines the order */
+/* Color value syntaxes: Name colors, hex values, rgb(), rgba()
+hsl(), */
