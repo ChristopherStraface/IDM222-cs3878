@@ -1,34 +1,62 @@
-/* File organization rules: Congifuration goes at the top,
-then your "general" elements, i.e. what affects all your
-paragraphs, headers, etc. Then if it's mors specific it goes
-below that. Then, media/browser rules, to give it rules for when
-the size changes (Not focusing on media changes this term) */
+body {
+    font-size: 16px;
+    background-color: #FFE7CD;
+    color: #3C2B15;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
 
-/* Selector- Something that can select an element */
-h1{
-    /* property: value */
-    color: navy; /* declaration */
+h1, h2 {
+    color: #370E48;
+    font-size: 32px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0.5em 0;
 }
-h2{
-    border-bottm: 2px solid #fff;
-    font-style: italic;
+
+h3, h4, h5, h6 {
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
+    margin: 0.5em 0;
 }
-body { font-family: Arital, sans-serif; }
-/* Class selector */
-.base_color { color: blue; }
-/* Descendant selector- In this case, the lists are only 
-affected if they're within a main element */
-main li { font-size: 90%;}
-/* Adjacent sibling selector- This means it grabs anything 
-immediately after the first selected element */
-h2+p {font-size: 90%}
-/* Multiple Selectors- You can select multiple
-elements at once */
-h1, h2, h3 {color: blue;}
-p, ul.speakers, li {font-family: 'Times New Roman', Times, serif}
-/* Pseudo selector examples */
-a:link {color: green}
-/* More than 1 style sheet can be implemented, the
-cascade determines the order */
-/* Color value syntaxes: Name colors, hex values, rgb(), rgba()
-hsl(), */
+
+p {
+    color: #3C2B15;
+    font-family: Arial, sans-serif;
+    margin: 1em 0;
+}
+
+a {
+    color: #0043BF;
+    text-decoration: underline;
+    font-family: Arial, sans-serif;
+}
+
+a:visited {
+    color: #6600BF;
+}
+
+button {
+    background-color: #F97007;
+    color: #FFF;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #E66106;
+}
+
+div, ul, li {
+    text-align: center;
+    margin: auto;
+}
