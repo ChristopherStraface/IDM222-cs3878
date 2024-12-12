@@ -51,6 +51,36 @@ a:visited {
     border-color: #6600BF;
 }
 
+body.dark-mode {
+    background-color: #692B07;
+    color: #EDEDED;
+}
+
+body.dark-mode h1 {
+    color: #D5C400;
+}
+
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6 {
+    color: #D5C400;
+}
+
+body.dark-mode p {
+    color: #FFFFFF;
+}
+
+body.dark-mode a {
+    color: #2EFF3F;
+}
+
+body.dark-mode a:visited {
+    color: #E2C5FC;
+    border-color: #9C72FF;
+}
+
 button {
     background-color: #F97007;
     color: #FFF;
