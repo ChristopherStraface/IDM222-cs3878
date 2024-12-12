@@ -1,3 +1,4 @@
+/* General Body elements */
 body {
     font-size: 16px;
     background-color: #FFE7CD;
@@ -8,7 +9,7 @@ body {
     text-align: center;
     box-sizing: border-box;
 }
-
+/* TMain header */
 h1 {
     color: #370E48;
     font-size: 32px;
@@ -19,7 +20,7 @@ h1 {
     padding: 0.5em;
     box-sizing: border-box;
 }
-
+/* Sub headers */
 h2, h3, h4, h5, h6 {
     font-size: 20px;
     font-family: "Times New Roman", Times, serif;
@@ -28,7 +29,7 @@ h2, h3, h4, h5, h6 {
     padding: 0.5em;
     box-sizing: border-box;
 }
-
+/* Paragraphs */
 p {
     color: #3C2B15;
     font-family: Arial, sans-serif;
@@ -36,7 +37,7 @@ p {
     padding: 1em;
     box-sizing: border-box;
 }
-
+/* Links */
 a {
     color: #0043BF;
     text-decoration: underline;
@@ -45,12 +46,12 @@ a {
     border: 1px solid transparent;
     box-sizing: border-box;
 }
-
+/* Links when visited */
 a:visited {
     color: #6600BF;
     border-color: #6600BF;
 }
-
+/* All elements' dark mode variants: lines 55 - 83 */
 body.dark-mode {
     background-color: #692B07;
     color: #EDEDED;
@@ -80,7 +81,7 @@ body.dark-mode a:visited {
     color: #E2C5FC;
     border-color: #9C72FF;
 }
-
+/* Buttons */
 button {
     background-color: #F97007;
     color: #FFF;
@@ -94,19 +95,19 @@ button {
     border: 1px solid #F97007;
     box-sizing: border-box;
 }
-
+/* When hovering button */
 button:hover {
     background-color: #E66106;
     border-color: #E66106;
 }
-
+/* Navigation menu general elements */
 .topnav {
     background-color: #433527;
     overflow: hidden;
     position: fixed;
     width: 100%;
 }
-
+/* Links in navigation menu */
 .topnav a {
     float: left;
     color: white;
@@ -124,7 +125,7 @@ button:hover {
 .topnav.responsive #myLinks {
     display: block;
 }
-
+/* Navigation menu icon */
 .topnav .icon {
     float: right;
     display: block;
@@ -133,7 +134,7 @@ button:hover {
     font-size: 20px;
     cursor: pointer;
 }
-
+/* Ensures navigation always fits screen */
 @media screen and (max-width: 600px) {
     .topnav a {
         float: none;
@@ -142,13 +143,14 @@ button:hover {
         text-align: left;
     }
 }
-
+/* Dividers */
 div{
     text-align: center;
     margin: auto;
     padding: 10px;
     box-sizing: border-box;
 }
+/* Lists */
 ul {
     list-style-position: inside;
     text-align: center;
