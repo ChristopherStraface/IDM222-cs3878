@@ -2,75 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>About Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credits</title>
     <link rel="stylesheet" href="screen.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="topnav">
+        <div id="myLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="featured-work.html">Featured Work</a>
+            <a href="skills.html">Skills</a>
+            <a href="credits.html">Credits</a>
+            <button id="darkModeToggle">Toggle Dark Mode</button>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
 
-<div class="topnav">
-  <div id="myLinks">
-    <a href="home.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="featured-work.html">Featured Work</a>
-    <a href="skills.html">Skills</a>
-    <a href="credits.html">Credits</a>
-    <button id="darkModeToggle">Toggle Dark Mode</button>
-  </div>
-  <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
     <br>
+
     <div id="test">
         <div id="intro">
             <h1>Credits</h1>
-            <p>My name is Christopher Straface, and welcome to my portfolio!</p>
-        </div>
-        
-        <div id="credits">
-            <h2>Relavant courses taken at Drexel University:</h2>
-            <img src="images/DrexelLogo.png" alt="Drexel Logo" width="200" height="200">
-            <p>These are relevant courses I have taken at Drexel which have taught me what I know, including how to make a portfolio website such as this one.</p>
-            <ul>
-                <li>User Interaction Design</li>
-                <li>Interaction Design</li>
-                <li>Web Design</li>
-                <li>Design Thinking in Product Design</li>
-                <li>Computer Science</li>
-                <li>Computer Programming</li>
-                <li>Computing and Informatics Design</li>
-            </ul>
-            <p>This website and its contents were developed entirely by myself with HTML and CSS</p>
-        </div>
+            <p>This page contains a list of courses I have taken at Drexel and credits for this website's creation</p>
+    <div id="credits">
+        <h2>Relevant Courses Taken at Drexel University:</h2>
+        <img src="images/DrexelLogo.png" alt="Drexel Logo" width="200" height="200">
+        <p>These courses have significantly contributed to my knowledge, including the skills needed to develop this portfolio website.</p>
+        <ul>
+            <li>User Interaction Design</li>
+            <li>Interaction Design</li>
+            <li>Web Design</li>
+            <li>Design Thinking in Product Design</li>
+            <li>Computer Science</li>
+            <li>Computer Programming</li>
+            <li>Computing and Informatics Design</li>
+        </ul>
+        <p>This website and its contents were personally developed using HTML and CSS.</p>
     </div>
-</body>
+</div>
+
 <script>
     function toggleMenu() {
-    var x = document.getElementById("myLinks");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "block";
+        var x = document.getElementById("myLinks");
+        x.style.display = x.style.display === "block" ? "none" : "block";
     }
-  }
-  </script>
-      <script>
-        function toggleDarkMode() {
-            const isDarkMode = document.body.classList.toggle('dark-mode');
-            localStorage.setItem('darkMode', isDarkMode ? 'on' : 'off');
+
+    function toggleDarkMode() {
+        const isDarkMode = document.body.classList.toggle('dark-mode');
+        localStorage.setItem('darkMode', isDarkMode ? 'on' : 'off');
+    }
+
+    function applyDarkModePreference() {
+        const darkMode = localStorage.getItem('darkMode');
+        if (darkMode === 'on') {
+            document.body.classList.add('dark-mode');
         }
-    
-        function applyDarkModePreference() {
-            const darkMode = localStorage.getItem('darkMode');
-            if (darkMode === 'on') {
-                document.body.classList.add('dark-mode');
-            }
-        }
-            document.addEventListener('DOMContentLoaded', function () {
-            applyDarkModePreference();
-                document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
-        });
-    </script>   
-</html>
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        applyDarkModePreference();
+        document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
+    });
+</script>

@@ -101,7 +101,7 @@ button:hover {
 }
 
 .topnav {
-    background-color: #333;
+    background-color: #433527;
     overflow: hidden;
     position: fixed;
     width: 100%;
@@ -160,24 +160,3 @@ li {
     text-align: left;
     margin: 0.5em 0;
 }
-
-#intro {
-    margin-bottom: 20px;
-}
-
-#background {
-    margin-bottom: 20px;
-}
-
-#experience {
-    margin-bottom: 20px;
-}
-
-#goals {
-    margin-bottom: 20px;
-}
-
-#contact {
-    margin-bottom: 20px;
-}
-

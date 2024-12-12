@@ -2,90 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
     <link rel="stylesheet" href="screen.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="topnav">
+        <div id="myLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="featured-work.html">Featured Work</a>
+            <a href="skills.html">Skills</a>
+            <a href="credits.html">Credits</a>
+            <button id="darkModeToggle">Toggle Dark Mode</button>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
 
- <div class="topnav">
-   <div id="myLinks">
-     <a href="home.html">Home</a>
-     <a href="about.html">About</a>
-     <a href="featured-work.html">Featured Work</a>
-     <a href="skills.html">Skills</a>
-     <a href="credits.html">Credits</a>
-     <button id="darkModeToggle">Toggle Dark Mode</button>
-   </div>
-   <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
-     <i class="fa fa-bars"></i>
-   </a>
- </div>
     <br>
+
     <div id="test">
         <div id="intro">
             <h1>About Me</h1>
             <img src="images/Selfie.png" alt="Selfie of Christopher Straface" width="200" height="200">
             <p>Learn all about me, and who I am!</p>
         </div>
-        
+
         <div id="background">
             <h2>Background:</h2>
-            <p>I was born in Philadelphia and have lived here all my life. I’m a creative mind who likes to take things slow and peacefully, and I love animals. When it was time for me to apply for universities, I was unsure of where I wanted to go or what I wanted to do. Drexel’s opportunities stuck out to someone like me, and it was during my first year I discovered my love for learning design, and found a place in the UXID major.</p>
+            <p>
+                I was born in Philadelphia and have lived here all my life. I’m a creative mind who likes to take things slow and peacefully, and I love animals.
+                When it was time for me to apply for universities, I was unsure of where I wanted to go or what I wanted to do. Drexel’s opportunities stuck out to someone like me, 
+                and it was during my first year I discovered my love for learning design, and found a place in the UXID major.
+            </p>
             <img src="images/StylishPhillyMap.jpg" alt="Map of Philadelphia" width="200" height="200">
-
         </div>
 
         <div id="experience">
             <h3>Experience:</h3>
-            <p>I have two years of experience taking courses in design and working on different design projects, ranging in scope from proof of concepts to full interactable designs and web pages.</p>
+            <p>
+                I have two years of experience taking courses in design and working on different design projects, ranging in scope from proof of concepts 
+                to full interactable designs and web pages.
+            </p>
             <img src="images/Experience.jpg" alt="Experience Photo" width="200" height="200">
         </div>
 
         <div id="goals">
             <h4>Goals:</h4>
-            <p>My goal is to learn more about the world through design. I love to create designs because I find it to be a wonderful expression of creativity, and a way to expand my thinking in unique ways to accommodate for different people. It’s a gateway to learn more about people all while creating something new and unique, and I love being able to make something new and impactful.</p>
-            <img src="images/Goals.jpg" alt="Goals Photo" width="200" height="200">
+            <p>
+                My goal is to learn more about the world through design. I love to create designs because I find it to be a wonderful expression of creativity, 
+                and a way to expand my thinking in unique ways to accommodate for different people. It’s a gateway to learn more about people all while creating 
+                something new and unique, and I love being able to make something new and impactful.
+            </p>
+            <img src="images/Goals.jpg" alt="Goals Photo" width="230" height="200">
+        </div>
+
+        <div id="resume">
+            <h4>Resume:</h4>
+            <a href="images/Christopher Straface's Drexel Resume.pdf" download>Tap here to download my resume</a>
         </div>
 
         <div id="contact">
             <h5>Contact Information:</h5>
             <ul>
-                <li> <img src="images/Mail.png" alt="Envelope" width="20" height="20"> Email: <a href="mailto:cs3878@drexel.edu">cs3878@drexel.edu</a></li>
-                <li> <img src="images/PhoneIcon.png" alt="Phone" width="20" height="20"> Phone: (267)-800-6507</li>
-                <li> <img src="images/InstagramLogo.png" alt="Instagram Logo" width="20" height="20"> Instagram: @this.is.chris05</li>
+                <li>
+                    <img src="images/Mail.png" alt="Envelope" width="20" height="20"> 
+                    Email: <a href="mailto:cs3878@drexel.edu">cs3878@drexel.edu</a>
+                </li>
+                <li>
+                    <img src="images/PhoneIcon.png" alt="Phone" width="20" height="20"> 
+                    Phone: (267)-800-6507
+                </li>
+                <li>
+                    <img src="images/InstagramLogo.png" alt="Instagram Logo" width="20" height="20"> 
+                    Instagram: @this.is.chris05
+                </li>
             </ul>
-        </div>  
-        <div id="link">
-            <p>Go back to <a href="index.html">that page</a></p>
-        </div>  
+        </div>
     </div>
+
     <script>
         function toggleMenu() {
-        var x = document.getElementById("myLinks");
-        if (x.style.display === "block") {
-          x.style.display = "none";
-        } else {
-          x.style.display = "block";
+            const menu = document.getElementById("myLinks");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
         }
-      }
-      </script>
-<script>
-    function toggleDarkMode() {
-        const isDarkMode = document.body.classList.toggle('dark-mode');
-        localStorage.setItem('darkMode', isDarkMode ? 'on' : 'off');
-    }
-    function applyDarkModePreference() {
-        const darkMode = localStorage.getItem('darkMode');
-        if (darkMode === 'on') {
-            document.body.classList.add('dark-mode');
+    </script>
+    <script>
+        function toggleDarkMode() {
+            const isDarkMode = document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode ? 'on' : 'off');
         }
-    }
-    document.addEventListener('DOMContentLoaded', function () {
-        applyDarkModePreference();
-        document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
-    });
-</script>
+
+        function applyDarkModePreference() {
+            const darkMode = localStorage.getItem('darkMode');
+            if (darkMode === 'on') {
+                document.body.classList.add('dark-mode');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            applyDarkModePreference();
+            document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
+        });
+    </script>
 </body>
 </html>

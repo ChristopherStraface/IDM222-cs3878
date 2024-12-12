@@ -2,74 +2,96 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>About Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Work</title>
     <link rel="stylesheet" href="screen.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div class="topnav">
+        <div id="myLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="featured-work.html">Featured Work</a>
+            <a href="skills.html">Skills</a>
+            <a href="credits.html">Credits</a>
+            <button id="darkModeToggle">Toggle Dark Mode</button>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
 
-<div class="topnav">
-  <div id="myLinks">
-    <a href="home.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="featured-work.html">Featured Work</a>
-    <a href="skills.html">Skills</a>
-    <a href="credits.html">Credits</a>
-    <button id="darkModeToggle">Toggle Dark Mode</button>
-  </div>
-  <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div>
     <br>
+
     <div id="test">
         <div id="intro">
             <h1>Featured Work</h1>
-            <p>My name is Christopher Straface, and welcome to my portfolio!</p>
+            <p>Take a look at what I have worked on so far!</p>
         </div>
-        
+
         <div id="featured-work1">
             <h2>YouTube Redesign:</h2>
-            <p>I created an interactable redesign for the YouTube mobile app which reconstructures the main pages while also making new additions with the intent of bettering the full experience. This project was created to explore creating new interfaces for a familiar application</p>
+            <img src="images/YouTube.png" alt="YouTube logo" width="325" height="175">
+            <p>
+                I created an interactable redesign for the YouTube mobile app which reconstructures the main pages while also making new additions with the intent of bettering the full experience.
+                This project was created to explore creating new interfaces for a familiar application and to improve the overall experience.
+            </p>
+            <a href="https://www.figma.com/design/3LKJpNFF3BDTK7PMIV5xd4/Chris-Straface-Project-212?node-id=15-22&t=kE5W5wGZmqopqEFH-1" target="_blank">
+                Tap here to view the full project in its Figma file
+            </a>
         </div>
 
         <div id="featured-work2">
             <h3>New Discord-Inspired Interface:</h3>
-            <p>I created a full, interactable interface for a new mobile app called “frctzn” (pronounced like “friction”), which is heavily based on Discord. This is a project not intended to become a full product, but a way to test animations and create new assets and interfaces</p>
+            <img src="images/frctzn.png" alt="frctzn logo" width="325" height="135">
+            <p>
+                I created a full, interactable interface for a new mobile app called “frctzn” (pronounced like “friction”), which is heavily based on Discord.
+                This is a project not intended to become a full product, but a way to test animations and create new assets and interfaces.
+            </p>
+            <a href="https://www.figma.com/design/ZdLHakmzQN9mQDxe749lbL/Straface-IDM-213-Project?node-id=0-1&t=nC0zM4rF5iGUgDNR-1" target="_blank">
+                Tap here to view the full project in its Figma file
+            </a>
         </div>
 
         <div id="featured-work3">
-            <h4>Partial interface design for new website:</h4>
-            <p>I contributed to the front end design for portions of a project that involved creating a new social media website. This project was only a proof of concept and not fully expanded upon, but still showcases design elements I created</p>
+            <h4>UI Design for New Website:</h4>
+            <img src="images/WebsiteLogo.png" alt="Logo for website" width="325" height="175">
+            <p>
+                I contributed to the front-end design for portions of a project that involved creating a new social media website called "UniSocial," a social media site directed towards Philly college students.
+                This project was only a proof of concept and not fully expanded upon, but still showcases design elements that I created.
+            </p>
+            <p>
+                Unfortunately, the final build of this project is no longer publicly accessible. But you can
+                <a href="https://www.figma.com/design/vXQMY0DRw7BFNxR8Zfh03C/UniSocial?node-id=0-1&t=PyB6Lup5OGEzFC6Y-1" target="_blank">
+                    tap here to view some of the elements I worked on in this Figma file
+                </a>
+            </p>
         </div>
     </div>
-</body>
-<script>
-    function toggleMenu() {
-    var x = document.getElementById("myLinks");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "block";
-    }
-  }
-  </script>
-      <script>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("myLinks");
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        }
+
         function toggleDarkMode() {
             const isDarkMode = document.body.classList.toggle('dark-mode');
             localStorage.setItem('darkMode', isDarkMode ? 'on' : 'off');
         }
-    
+
         function applyDarkModePreference() {
             const darkMode = localStorage.getItem('darkMode');
             if (darkMode === 'on') {
                 document.body.classList.add('dark-mode');
             }
         }
-            document.addEventListener('DOMContentLoaded', function () {
+
+        document.addEventListener('DOMContentLoaded', function () {
             applyDarkModePreference();
-                document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
+            document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
         });
-    </script>   
+    </script>
+</body>
 </html>
