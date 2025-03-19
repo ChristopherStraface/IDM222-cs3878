@@ -11,6 +11,7 @@ body {
 }
 /* TMain header */
 h1 {
+    margin-top: 30px;
     color: #370E48;
     font-size: 32px;
     font-family: "Times New Roman", Times, serif;
@@ -22,7 +23,8 @@ h1 {
 }
 /* Sub headers */
 h2, h3, h4, h5, h6 {
-    font-size: 20px;
+    font-size: 35px;
+    text-decoration: underline;
     font-family: "Times New Roman", Times, serif;
     font-weight: bold;
     margin: 0.5em 0;
@@ -36,6 +38,7 @@ p {
     margin: 1em 0;
     padding: 1em;
     box-sizing: border-box;
+    max-width: 600px;
 }
 /* Links */
 a {
@@ -51,6 +54,19 @@ a:visited {
     color: #6600BF;
     border-color: #6600BF;
 }
+
+.contactImg {
+    width: 25px;
+    height: 25px;
+    margin-bottom: -5px;
+}
+
+/* Video */
+video {
+    margin-bottom: 50px;
+    width: 500px;
+}
+
 /* All elements' dark mode variants: lines 55 - 83 */
 body.dark-mode {
     background-color: #692B07;
@@ -105,7 +121,10 @@ button:hover {
     background-color: #433527;
     overflow: hidden;
     position: fixed;
+    display: flex;
+    flex-direction: row;
     width: 100%;
+    gap: 20px;
 }
 /* Links in navigation menu */
 .topnav a {
@@ -122,6 +141,10 @@ button:hover {
     display: none;
 }
 
+#darkModeToggle {
+    margin-left: 30px;
+}
+
 .topnav.responsive #myLinks {
     display: block;
 }
@@ -135,16 +158,10 @@ button:hover {
     cursor: pointer;
 }
 /* Ensures navigation always fits screen */
-@media screen and (max-width: 600px) {
-    .topnav a {
-        float: none;
-    }
-    #myLinks a {
-        text-align: left;
-    }
-}
+
 /* Dividers */
-div{
+div {
+    display: block;
     text-align: center;
     margin: auto;
     padding: 10px;
@@ -162,3 +179,175 @@ li {
     text-align: left;
     margin: 0.5em 0;
 }
+
+@media screen and (max-width: 600px) {
+    .topnav a {
+        float: none;
+    }
+    #myLinks a {
+        text-align: left;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    li {
+        display: block;
+    }
+}
+ 
+@media screen and (min-width: 768px) {
+
+    .imgAndText {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .featuredImg {
+        width: 500px;
+        height: 300px;
+    }
+
+    body {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2, h3, h4, h5, h6 {
+        font-size: 30px;
+    }
+
+    p {
+        padding: 1.5em;
+        text-align: center;
+        max-width: 80vw;
+    }
+
+    img {
+        width: 300px;
+        height: 300px;
+    }
+
+    video {
+        width: 300px;
+    }
+
+    .topnav {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .topnav a {
+        float: none;
+        display: inline-block;
+        padding: 10px 20px;
+    }
+
+    .topnav .icon {
+        display: none; /* Hide mobile menu icon */
+    }
+
+    #myLinks {
+        display: flex;
+        gap: 20px;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 18px;
+    }
+
+    div {
+        text-align: center;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    li {
+        display: block;
+    }
+    
+}
+@media screen and (min-width: 1024px) {
+    
+    .skillImg {
+        width: 200px;
+        height: 200px;
+        margin-left: 20px;
+    }
+
+    .pText {
+        text-align: left;
+        width: 200%;
+    }
+
+    .imgAndText {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+        margin-bottom: 50px;
+    }
+
+    .featuredImg {
+        width: 500px;
+        height: 300px;
+    }
+
+    body {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    div {
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    p {
+        max-width: 1000px;
+        font-size: 20px;
+        margin: auto;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+    }
+
+    li {
+        display: block;
+    }
+
+    .content-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: center;
+    }
+    
+    img {
+        width: 450px;
+        height: 450px;
+    }
+}
+
