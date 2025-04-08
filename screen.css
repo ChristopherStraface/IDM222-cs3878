@@ -9,7 +9,8 @@ body {
     text-align: center;
     box-sizing: border-box;
 }
-/* TMain header */
+
+/* Main header */
 h1 {
     margin-top: 30px;
     color: #370E48;
@@ -21,8 +22,13 @@ h1 {
     padding: 0.5em;
     box-sizing: border-box;
 }
+
 /* Sub headers */
-h2, h3, h4, h5, h6 {
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-size: 35px;
     text-decoration: underline;
     font-family: "Times New Roman", Times, serif;
@@ -31,6 +37,7 @@ h2, h3, h4, h5, h6 {
     padding: 0.5em;
     box-sizing: border-box;
 }
+
 /* Paragraphs */
 p {
     color: #3C2B15;
@@ -40,6 +47,7 @@ p {
     box-sizing: border-box;
     max-width: 600px;
 }
+
 /* Links */
 a {
     color: #0043BF;
@@ -49,6 +57,7 @@ a {
     border: 1px solid transparent;
     box-sizing: border-box;
 }
+
 /* Links when visited */
 a:visited {
     color: #6600BF;
@@ -77,10 +86,10 @@ body.dark-mode h1 {
     color: #D5C400;
 }
 
-body.dark-mode h2, 
-body.dark-mode h3, 
-body.dark-mode h4, 
-body.dark-mode h5, 
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
 body.dark-mode h6 {
     color: #D5C400;
 }
@@ -97,6 +106,7 @@ body.dark-mode a:visited {
     color: #E2C5FC;
     border-color: #9C72FF;
 }
+
 /* Buttons */
 button {
     background-color: #F97007;
@@ -111,11 +121,81 @@ button {
     border: 1px solid #F97007;
     box-sizing: border-box;
 }
+
 /* When hovering button */
 button:hover {
     background-color: #E66106;
     border-color: #E66106;
 }
+
+/* Switch container */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 34px;
+}
+
+/* Hide default checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider track */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.4s;
+}
+
+/* Slider handle */
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.4s;
+    z-index: 2;
+}
+
+/* When checked - move the handle */
+input:checked + .slider::before {
+    transform: translateX(36px);
+}
+
+/* When checked - change track color */
+input:checked + .slider {
+    background-color: #444;
+}
+
+/* Icons */
+.icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.sun {
+    left: 8px;
+}
+
+.moon {
+    right: 8px;
+}
+
 /* Navigation menu general elements */
 .topnav {
     background-color: #433527;
@@ -126,6 +206,7 @@ button:hover {
     width: 100%;
     gap: 20px;
 }
+
 /* Links in navigation menu */
 .topnav a {
     float: left;
@@ -135,6 +216,18 @@ button:hover {
     text-decoration: none;
     font-size: 17px;
     display: block;
+}
+
+/* #Resume {
+    
+} */
+
+#ResumeEducation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    text-align: left;
 }
 
 #myLinks {
@@ -148,6 +241,7 @@ button:hover {
 .topnav.responsive #myLinks {
     display: block;
 }
+
 /* Navigation menu icon */
 .topnav .icon {
     float: right;
@@ -157,6 +251,7 @@ button:hover {
     font-size: 20px;
     cursor: pointer;
 }
+
 /* Ensures navigation always fits screen */
 
 /* Dividers */
@@ -167,6 +262,7 @@ div {
     padding: 10px;
     box-sizing: border-box;
 }
+
 /* Lists */
 ul {
     list-style-position: inside;
@@ -184,6 +280,7 @@ li {
     .topnav a {
         float: none;
     }
+
     #myLinks a {
         text-align: left;
     }
@@ -199,7 +296,7 @@ li {
         display: block;
     }
 }
- 
+
 @media screen and (min-width: 768px) {
 
     .imgAndText {
@@ -222,7 +319,11 @@ li {
         font-size: 40px;
     }
 
-    h2, h3, h4, h5, h6 {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         font-size: 30px;
     }
 
@@ -246,7 +347,11 @@ li {
         display: flex;
         justify-content: space-around;
         padding: 10px;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
     }
+    
 
     .topnav a {
         float: none;
@@ -255,7 +360,8 @@ li {
     }
 
     .topnav .icon {
-        display: none; /* Hide mobile menu icon */
+        display: none;
+        /* Hide mobile menu icon */
     }
 
     #myLinks {
@@ -282,10 +388,64 @@ li {
     li {
         display: block;
     }
-    
+
 }
+
 @media screen and (min-width: 1024px) {
-    
+
+    .ResumeBody .ResumeSection {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        text-align: left;
+        margin-left: 0;
+        border-bottom: 2px solid rgb(0, 0, 0)
+    }
+
+    .ResumeBody .ResumeContainer {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        /* Left column is larger, right is smaller */
+        gap: 20px;
+        align-items: start;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .ResumeBody .RightColumn {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* Align content to the left inside the right column */
+    }
+
+    .ResumeBody .LeftColumn {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .ResumeBody .imgAndText {
+        justify-content: flex-start;
+    }
+
+    .ResumeBody p {
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .ResumeBody ul {
+        display: block;
+        padding-left: 20px;
+        text-align: left;
+    }
+
+    .ResumeBody li {
+        display: list-item;
+        text-align: left;
+    }
+
     .skillImg {
         width: 200px;
         height: 200px;
@@ -344,10 +504,9 @@ li {
         gap: 20px;
         align-items: center;
     }
-    
+
     img {
         width: 450px;
         height: 450px;
     }
 }
-

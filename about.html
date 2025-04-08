@@ -8,21 +8,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <!-- Navigation Menu -->
-    <div class="topnav">
-        <div id="myLinks">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="featured-work.html">Featured Work</a>
-            <a href="skills.html">Skills</a>
-            <a href="credits.html">Credits</a>
-            <button id="darkModeToggle">Toggle Dark Mode</button>
-        </div>
-        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
-            <i class="fa fa-bars"></i>
-        </a>
+ <!-- Navigation Menu -->
+ <div class="topnav">
+    <div id="myLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="featured-work.html">Featured Work</a>
+        <a href="skills.html">Skills</a>
+        <a href="credits.html">Credits</a>
+        <a href="resume.html">Resume</a>
+        <label class="switch">
+            <input type="checkbox" id="darkModeToggle">
+            <span class="slider">
+                <img class="icon sun" src="media/sun.png" alt="Sun">
+                <img class="icon moon" src="media/moon.png" alt="Moon">
+            </span>
+        </label>
     </div>
-
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
     <br>
     <!-- Introduction to About Me page -->
     <div id="test">
@@ -87,28 +93,26 @@
     </div>
     <!-- Script that contains functions for toggling navigation menu, dark mode, and having dark mode stay toggled on/off while visiting different pages -->
     <script>
-        function toggleMenu() {
-            const menu = document.getElementById("myLinks");
-            menu.style.display = menu.style.display === "block" ? "none" : "block";
-        }
-    </script>
-    <script>
-        function toggleDarkMode() {
-            const isDarkMode = document.body.classList.toggle('dark-mode');
-            localStorage.setItem('darkMode', isDarkMode ? 'on' : 'off');
-        }
+        function toggleDarkMode(isEnabled) {
+    document.body.classList.toggle('dark-mode', isEnabled);
+    localStorage.setItem('darkMode', isEnabled ? 'on' : 'off');
+}
 
-        function applyDarkModePreference() {
-            const darkMode = localStorage.getItem('darkMode');
-            if (darkMode === 'on') {
-                document.body.classList.add('dark-mode');
-            }
-        }
+function applyDarkModePreference() {
+    const darkMode = localStorage.getItem('darkMode') === 'on';
+    document.body.classList.toggle('dark-mode', darkMode);
+    document.getElementById('darkModeToggle').checked = darkMode;
+}
 
-        document.addEventListener('DOMContentLoaded', function () {
-            applyDarkModePreference();
-            document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
+document.addEventListener('DOMContentLoaded', function () {
+    applyDarkModePreference();
+    const toggle = document.getElementById('darkModeToggle');
+    if (toggle) {
+        toggle.addEventListener('change', function (e) {
+            toggleDarkMode(e.target.checked);
         });
-    </script>
+    }
+});
+</script>
 </body>
 </html>

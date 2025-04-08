@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="screen.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="ResumeBody">
+    <!-- Navigation Menu -->
+    <div class="topnav">
+        <div id="myLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="featured-work.html">Featured Work</a>
+            <a href="skills.html">Skills</a>
+            <a href="credits.html">Credits</a>
+            <a href="resume.html">Resume</a>
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider">
+                    <img class="icon sun" src="media/sun.png" alt="Sun">
+                    <img class="icon moon" src="media/moon.png" alt="Moon">
+                </span>
+            </label>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+    <h1>Christopher Straface</h1>
+    <a href="media/Christopher Straface's Drexel Resume.pdf" target="_blank">
+        <button>View PDF Version</button>
+    </a>
+
+    <div class="ResumeContainer">
+        <div class="LeftColumn">
+            <div class="ResumeSection">
+                <h2>UX Designer</h2>
+                <p>Insert description of self here</p>
+            </div>
+            <div class="ResumeSection">
+                <h2>Project Experience</h2>
+                <h3>Social Media Website Creation (Jan 2024 - June 2024)</h3>
+                <ul>
+                    <li>Designed engaging graphics to enhance user experience</li>
+                    <li>Developed a secure and user-friendly login page</li>
+                    <li>Coordinated team meetings and managed schedules</li>
+                </ul>
+
+                <h3>Interactive Website Creation (Sept 2024 - March 2025)</h3>
+                <ul>
+                    <li>Designed interactive graphics for user engagement</li>
+                    <li>Developed an independent website with custom scripts</li>
+                    <li>Enabled dynamic page manipulation for optimized space</li>
+                </ul>
+            </div>
+
+            <div class="ResumeSection">
+                <h2>Employment Experience</h2>
+                <h3>ESF Summer Camps - Philadelphia, PA (June - August 2024)</h3>
+                <ul>
+                    <li>Oversaw well-being and activities of campers</li>
+                    <li>Provided first aid and ensured safety during activities</li>
+                    <li>Communicated effectively with coworkers for smooth operations</li>
+                </ul>
+
+                <h3>Gaeta’s Tomato Pies - Philadelphia, PA (June - August 2020)</h3>
+                <ul>
+                    <li>Maintained kitchen hygiene and cleanliness</li>
+                    <li>Demonstrated strong work ethic and time management</li>
+                    <li>Communicated with staff and customers to enhance collaboration</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="RightColumn">
+
+            <div class="ResumeSection">
+                <h2>Education</h2>
+                <p><strong>Drexel University</strong> - Philadelphia, PA</p>
+                <p>Bachelor of Science in User Experience and Interaction Design | GPA: 3.39</p>
+            </div>
+
+            <div class="ResumeSection">
+                <h2>Skills</h2>
+                <p><strong>Business Software:</strong> Microsoft Office (Excel, Outlook, PowerPoint, Word, Teams),
+                    Google (Sheets, Docs)</p>
+                <p><strong>Programming Languages:</strong> Java, Python, HTML, CSS</p>
+                <p><strong>Design Software/Programs:</strong> Adobe Suite (Photoshop, Illustrator, After Effects),
+                    Figma, Canva</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Script that contains functions for toggling navigation menu, dark mode, and having dark mode stay toggled on/off while visiting different pages -->
+    <script>
+        function toggleDarkMode(isEnabled) {
+    document.body.classList.toggle('dark-mode', isEnabled);
+    localStorage.setItem('darkMode', isEnabled ? 'on' : 'off');
+}
+
+function applyDarkModePreference() {
+    const darkMode = localStorage.getItem('darkMode') === 'on';
+    document.body.classList.toggle('dark-mode', darkMode);
+    document.getElementById('darkModeToggle').checked = darkMode;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    applyDarkModePreference();
+    const toggle = document.getElementById('darkModeToggle');
+    if (toggle) {
+        toggle.addEventListener('change', function (e) {
+            toggleDarkMode(e.target.checked);
+        });
+    }
+});
+</script>
+</body>
+
+</html>
