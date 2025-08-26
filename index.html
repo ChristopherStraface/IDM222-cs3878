@@ -1,66 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WIP Portfolio</title>
     <link rel="stylesheet" href="screen.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-  <!-- Navigation Menu -->
-  <div class="topnav">
-    <div id="myLinks">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="featured-work.html">Featured Work</a>
-        <a href="skills.html">Skills</a>
-        <a href="credits.html">Credits</a>
-        <a href="resume.html">Resume</a>
-        <label class="switch">
-            <input type="checkbox" id="darkModeToggle">
-            <span class="slider">
-                <img class="icon sun" src="media/sun.png" alt="Sun">
-                <img class="icon moon" src="media/moon.png" alt="Moon">
-            </span>
-        </label>
+    <!-- Navigation Menu -->
+    <div class="topnav">
+        <div id="myLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="featured-work.html">Featured Work</a>
+            <a href="skills.html">Skills</a>
+            <a href="credits.html">Credits</a>
+            <a href="resume.html">Resume</a>
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider">
+                    <img class="icon sun" src="media/sun.png" alt="Sun">
+                    <img class="icon moon" src="media/moon.png" alt="Moon">
+                </span>
+            </label>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
     </div>
-    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
-        <i class="fa fa-bars"></i>
-    </a>
-</div>
+
     <!-- Portfolio Introduction -->
     <div id="test">
         <br>
-            <h1>Portfolio</h1>
-            <p>My name is Christopher Straface, and welcome to my portfolio!</p>
-            <div id="intro" class="imgAndText">
-            <p>I am a UXID major at Drexel University. Please look through my portfolio for more information about me and my work.</p>
+        <h1>Hello, my name is Christopher Straface</h1>
+        <div id="intro" class="imgAndText">
+            <p>I am studying User Experience and Interaction Design at Drexel University. I love designing beautiful,
+                highly functional interfaces that satisfy user needs. I have a passion for interface design as well as
+                development, and this portfolio serves as an example of who I am and what I have accomplished as a
+                designer.</p>
             <img src="media/Selfie.png" alt="Selfie" width="300" height="300">
         </div>
+
+        <a href="https://www.figma.com/design/3LKJpNFF3BDTK7PMIV5xd4/Chris-Straface-Project-212?node-id=15-22&t=kE5W5wGZmqopqEFH-1"
+            target="_blank">
+            <div class="caseStudy1">
+                <h4>Solo Project</h4>
+                <h1>YouTube Redesign</h1>
+                <h3>Interactive redesign for the YouTube mobile app, reconstructing the main pages while also making new
+                    additions to improve the full experience. This project was created to explore creating new
+                    interfaces for a familiar application and to improve the overall experience.</h2>
+                    <h4>#UserResearch #QuantitativeSurveys #UserInterviews #CompetitiveAnalysis
+                </h3>
+            </div>
+        </a>
+
+    
+        <a href="https://www.figma.com/design/ZdLHakmzQN9mQDxe749lbL/Straface-IDM-213-Project?node-id=0-1&t=nC0zM4rF5iGUgDNR-1"
+        target="_blank">
+        <div class="caseStudy2">
+            <h4>Solo Project</h4>
+            <h1>Discord-Inspired Interface</h1>
+            <h3>I created a full, interactable interface for a new mobile app called “frctzn” (pronounced like “friction”), which is heavily based on Discord. This is a project not intended to become a full product, but a way to test animations and create new assets and interfaces</h2>
+                <h4>#UserResearch #QuantitativeSurveys #UserInterviews #CompetitiveAnalysis
+            </h3>
+        </div>
+        </a>
+
+
+        <a href="https://www.figma.com/design/vXQMY0DRw7BFNxR8Zfh03C/UniSocial?node-id=0-1&t=PyB6Lup5OGEzFC6Y-1"
+            target="_blank">
+            <div class="caseStudy3">
+                <h4>Team Project</h4>
+                <h1>UI Design for New Website</h1>
+                <h3>I contributed to the front-end design for portions of a project that involved creating a new social media website called "UniSocial," a social media site directed towards Philly college students. This project was only a proof of concept and not fully expanded upon, but still showcases design elements that I created.</h2>
+                    <h4>#UserResearch #QuantitativeSurveys #UserInterviews #CompetitiveAnalysis
+                </h3>
+            </div>
+        </a>
+        
+        <br>
+        <div id="featured-work4" class="imgAndText">
+            <img src="media/Sobobatage.png" alt="Logo for Sabobatage" class="featuredImg" width="325" height="175">
+            <p class="pText">
+                I contributed to the animation of a "how to play" video for a card game known as "Sabobatage." All
+                animation was done through Adobe After Effects. Below is a video containing the portion I animated.
+            </p>
+        </div>
+        <video controls>
+            <source src="media/BobaBoards.mp4" type="video/mp4">
+            Your browser does not support this video.
+        </video>
+        <br>
+    </div>
     </div>
     <!-- Script that contains functions for toggling navigation menu, dark mode, and having dark mode stay toggled on/off while visiting different pages -->
     <script>
         function toggleDarkMode(isEnabled) {
-    document.body.classList.toggle('dark-mode', isEnabled);
-    localStorage.setItem('darkMode', isEnabled ? 'on' : 'off');
-}
+            document.body.classList.toggle('dark-mode', isEnabled);
+            localStorage.setItem('darkMode', isEnabled ? 'on' : 'off');
+        }
 
-function applyDarkModePreference() {
-    const darkMode = localStorage.getItem('darkMode') === 'on';
-    document.body.classList.toggle('dark-mode', darkMode);
-    document.getElementById('darkModeToggle').checked = darkMode;
-}
+        function applyDarkModePreference() {
+            const darkMode = localStorage.getItem('darkMode') === 'on';
+            document.body.classList.toggle('dark-mode', darkMode);
+            document.getElementById('darkModeToggle').checked = darkMode;
+        }
 
-document.addEventListener('DOMContentLoaded', function () {
-    applyDarkModePreference();
-    const toggle = document.getElementById('darkModeToggle');
-    if (toggle) {
-        toggle.addEventListener('change', function (e) {
-            toggleDarkMode(e.target.checked);
+        document.addEventListener('DOMContentLoaded', function () {
+            applyDarkModePreference();
+            const toggle = document.getElementById('darkModeToggle');
+            if (toggle) {
+                toggle.addEventListener('change', function (e) {
+                    toggleDarkMode(e.target.checked);
+                });
+            }
         });
-    }
-});
-</script> 
+    </script>
 </body>
+
 </html>
