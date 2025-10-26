@@ -128,7 +128,7 @@ body.dark-mode button:hover {
 }
 
 body.dark-mode a {
-    color: #2EFF3F;
+    color: #ffffff;
 }
 
 /* body.dark-mode a:visited {
@@ -417,10 +417,72 @@ li {
         z-index: -1;
 }
 
+.caseStudy5 {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    border-style: solid;
+    margin-bottom: 50px;
+}
+
+.caseStudy5::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url(media/Mural.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.3; /* Adjust transparency here */
+        z-index: -1;
+}
+
 @media screen and (max-width: 600px) {
-    .topnav a {
-        float: none;
-    }
+.topnav {
+    background-color: #433527;
+    overflow: hidden;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    /* flex-direction: row; */
+    width: 100%;
+    gap: 1px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Links in navigation menu */
+.topnav a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.topnavcontainer {  
+  width: 100%;
+  background-color: #433527;
+}
+
+.switch {
+    margin-top: 2px;
+    width: 50px;
+    height: 35px;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(20px);
+}
+
 
     .ResumeBody .ResumeContainer {
         flex-direction: column;
@@ -938,4 +1000,32 @@ li {
         height: 450px;
     }
 }
+
+/* --- Fix topnav position on small screens --- */
+.topnavcontainer {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100vw !important;
+  position: relative;
+}
+
+.topnav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0 !important;
+  width: 100vw !important;
+  box-sizing: border-box;
+}
+
+.topnav, .topnavcontainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 9999 !important; 
+  background-color: #433527; 
+}
+
+
 
