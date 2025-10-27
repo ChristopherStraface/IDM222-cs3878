@@ -590,7 +590,7 @@ input:checked + .slider:before {
         height: 250px;
     }
 
-    .caseStudy1, .caseStudy1::before, .caseStudy2, .caseStudy2::before, .caseStudy3, .caseStudy3::before {
+    .caseStudy1, .caseStudy1::before, .caseStudy2, .caseStudy2::before, .caseStudy3, .caseStudy3::before .caseStudy5, .caseStudy5::before{
 
         width: 400px;
         height: 325px;
@@ -652,7 +652,7 @@ input:checked + .slider:before {
     font-size: 0.8rem;
   }
 
-        .caseStudy4 {
+    .caseStudy4 {
     padding: 0.6rem;
   }
 
@@ -665,6 +665,22 @@ input:checked + .slider:before {
   }
 
   .caseStudy4 h4 {
+    font-size: 0.8rem;
+  }
+
+ .caseStudy5 {
+    padding: 0.6rem;
+  }
+
+  .caseStudy5 h1 {
+    font-size: 1.2rem;
+  }
+
+  .caseStudy5 h2 {
+    font-size: 1rem;
+  }
+
+  .caseStudy5 h4 {
     font-size: 0.8rem;
   }
 
