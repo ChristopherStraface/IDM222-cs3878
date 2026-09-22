@@ -9,145 +9,214 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body class="ResumeBody">
-    <!-- Navigation Menu -->
-<div class="topnavcontainer">
-    <div class="topnav">
-        <!-- <div id="myLinks"> -->
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <!-- <a href="featured-work.html">Featured Work</a> -->
-            <!-- <a href="skills.html">Skills</a> -->
-            <a href="credits.html">Credits</a>
-            <a href="resume.html">Resume</a>
-            <label class="switch">
-                <input type="checkbox" id="darkModeToggle">
-                <span class="slider">
-                    <!-- <img class="icon sun" src="media/sun.png" alt="Sun">
-                    <img class="icon moon" src="media/moon.png" alt="Moon"> -->
-                </span>
-            </label>
-    </div>
-</div>
-<br>
-<br>
-    <h1>Christopher Straface</h1>
+<body id="portfoliobody" class="resume-page">
+    <a class="skip-link" href="#resume-intro">Skip Navigation</a>
 
-
-    <div class="ResumeContainer">
-        <div class="LeftColumn">
-            <div class="ResumeSection">
-                <h2>UX Designer</h2>
-                <p>User-centered UX designer passionate about creating intuitive, accessible, and visually engaging digital experiences. Skilled in wireframing, prototyping, and developing, with a collaborative mindset and a keen eye for detail. Worked in several collaborative projects which show skill in teamwork, design, and development.</p>
+    <nav class="topnavcontainer" aria-label="Main navigation">
+        <ul class="topnav" id="mainNav" role="menubar" aria-label="Main navigation">
+            <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+            <li role="none"><a href="about.html" role="menuitem">About</a></li>
+            <!-- <li role="none"><a href="contact.html" role="menuitem">Contact</a></li> -->
+            <li role="none"><a href="resume.html" role="menuitem" aria-current="page">Resume</a></li>
+        </ul>
+        <div class="dropdown">
+            <button type="button" class="dropdown-toggle" aria-label="Settings menu" aria-expanded="false">⚙️</button>
+            <div class="dropdown-menu" aria-hidden="true">
+                <div class="toggle-container">
+                    <label class="switch" aria-label="Toggle dark mode">
+                        <input type="checkbox" id="darkModeToggle" aria-label="Dark mode toggle">
+                        <span class="slider" aria-hidden="true"></span>
+                    </label>
+                    <span class="toggle-label">Dark Mode Toggle</span>
+                </div>
+                <button id="dyslexiaToggle" class="dyslexia-button" type="button" aria-pressed="false">Dyslexia-Friendly Mode</button>
             </div>
-            <div class="ResumeSection">
-                <h2>Project Experience</h2>
-                <h3>Recipe Database/Website Creation</h3>
-                <h3>Solo Designer/Front and Back End Developer</h3>
-                <h4>September 2025 - December 2025</h4>
-                <ul>
-                    <li>Designed and implemented a database-driven recipe website focused on usability, clarity, and information hierarchy</li>
-                    <br>
-                    <li>Transformed complex recipe data into intuitive, readable interfaces using HTML, CSS, JavaScript, and PHP</li>
-                    <br>
-                    <li>Aligned backend data structures with user-centered design principles to support real-world tasks</li>
-                    <br>
-                    <li></li>
-                </ul>
-
-                <h3>Food Truck Ordering App UI</h3>
-                <h3>Front-End Designer/UX Researcher</h3>
-                <h4>Sept 2025 - December 2025</h4>
-                <ul>
-                    <li>Conducted user interviews and competitor research to inform the design of a mobile food-truck ordering experience</li>
-                    <br>
-                    <li>Designed a high-fidelity mobile prototype in Figma focused on fast, intuitive ordering</li>
-                    <br>
-                    <li>Translated research insights into clear user flows and interaction patterns</li>
-                    <br>
-                    <li>Collaborated with a cross-functional team to iterate on designs through feedback and critique</li>
-                </ul>
-            </div>
-
-            <div class="ResumeSection">
-                <h2>Employment Experience</h2>
-                <h3>Clownfish Creative</h3>
-                <h3>Intern</h3>
-                <h4>Philadelphia, PA (April - September 2025)</h4>
-                <ul>
-                    <li>Contributed to UI design and layout development for a new client website, supporting consistency, accessibility, and brand alignment</li>
-                    <br>
-                    <li>Collaborated closely with the client to translate feedback and evolving requirements into design iterations and improved user flows</li>
-                    <br>
-                    <li>Authored comparative UI research reports, analyzing competitor websites to identify usability patterns, design trends, and actionable improvements for the client site</li>
-                    <br>
-                    <li> Supported and participated in user research sessions and interviews, synthesizing insights into clear design recommendations and personas</li>
-                </ul>
-
-                <h3>ACME Markets</h3>
-                <h3>Deli Clerk</h3>
-                <h4>Philadelphia, PA (May 2025 - Present)</h4>
-                <ul>
-                    <li>Maintained an organized, efficient workspace, optimizing layout and process flow to support a smoother journey from order to fulfillment</li>
-                    <br>
-                    <li>Delivered clear, friendly interactions that prioritized customer experience, anticipating needs, and adapting communication for different audiences</li>
-                    <br>
-                    <li>Supported cross-functional tasks—such as restocking supplies and managing inventory—to ensure a seamless experience that supported front-end service quality</li>
-                    <br>
-                </ul>
-            </div>
-
         </div>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mainNav">&#9776;</button>
+    </nav>
 
-        <div class="RightColumn">
+    <main id="test" role="main" aria-label="Main content">
+        <header id="resume-intro" class="resume-header" role="region" aria-labelledby="resume-heading" tabindex="0">
+            <h1 id="resume-heading">Christopher Straface</h1>
+            <p>UX designer focused on meaningful, accessible, and enjoyable digital experiences.</p>
+        </header>
 
-            <div class="ResumeSection">
-                <h2>Education</h2>
-                <p><strong>Drexel University</strong> - Philadelphia, PA</p>
-                <p>Bachelor of Science in User Experience and Interaction Design | GPA: 3.42</p>
+        <section class="ResumeContainer" aria-label="Resume content">
+            <div class="LeftColumn">
+                <div class="ResumeSection">
+                    <h2>UX Designer</h2>
+                    <p>User-centered UX designer passionate about creating intuitive, accessible, and visually engaging digital experiences. Skilled in wireframing, prototyping, and developing, with a collaborative mindset and a keen eye for detail. Worked in several collaborative projects which show skill in teamwork, design, and development.</p>
+                </div>
+
+                <div class="ResumeSection">
+                    <h2>Project Experience</h2>
+
+                    <h3>Recipe Database/Website Creation</h3>
+                    <h4>Solo Designer/Front and Back End Developer</h4>
+                    <p class="resume-date">September 2025 - December 2025</p>
+                    <ul>
+                        <li>Designed and implemented a database-driven recipe website focused on usability, clarity, and information hierarchy.</li>
+                        <li>Transformed complex recipe data into intuitive, readable interfaces using HTML, CSS, JavaScript, and PHP.</li>
+                        <li>Aligned backend data structures with user-centered design principles to support real-world tasks.</li>
+                    </ul>
+
+                    <h3>Food Truck Ordering App UI</h3>
+                    <h4>Front-End Designer/UX Researcher</h4>
+                    <p class="resume-date">Sept 2025 - December 2025</p>
+                    <ul>
+                        <li>Conducted user interviews and competitor research to inform the design of a mobile food-truck ordering experience.</li>
+                        <li>Designed a high-fidelity mobile prototype in Figma focused on fast, intuitive ordering.</li>
+                        <li>Translated research insights into clear user flows and interaction patterns.</li>
+                        <li>Collaborated with a cross-functional team to iterate on designs through feedback and critique.</li>
+                    </ul>
+                </div>
+
+                <div class="ResumeSection">
+                    <h2>Employment Experience</h2>
+
+                    <h3>Clownfish Creative</h3>
+                    <h4>Intern</h4>
+                    <p class="resume-date">Philadelphia, PA (April - September 2025)</p>
+                    <ul>
+                        <li>Contributed to UI design and layout development for a new client website, supporting consistency, accessibility, and brand alignment.</li>
+                        <li>Collaborated closely with the client to translate feedback and evolving requirements into design iterations and improved user flows.</li>
+                        <li>Authored comparative UI research reports, analyzing competitor websites to identify usability patterns, design trends, and actionable improvements for the client site.</li>
+                        <li>Supported and participated in user research sessions and interviews, synthesizing insights into clear design recommendations and personas.</li>
+                    </ul>
+
+                    <h3>ACME Markets</h3>
+                    <h4>Deli Clerk</h4>
+                    <p class="resume-date">Philadelphia, PA (May 2025 - Present)</p>
+                    <ul>
+                        <li>Maintained an organized, efficient workspace, optimizing layout and process flow to support a smoother journey from order to fulfillment.</li>
+                        <li>Delivered clear, friendly interactions that prioritized customer experience, anticipating needs, and adapting communication for different audiences.</li>
+                        <li>Supported cross-functional tasks, such as restocking supplies and managing inventory, to ensure a seamless experience that supported front-end service quality.</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="ResumeSection">
-                <h2>Skills</h2>
-                <p><strong>UX/UI Skills:</strong> Wireframes, personas, prototyping, usability testing, development</p>
-                <p><strong>Design Software/Programs:</strong> Adobe Suite (Photoshop, Illustrator, After Effects),
-                    Figma, Canva</p>
-                <p><strong>Programming Languages:</strong> PHP, Java, Python, HTML, CSS</p>
-                <p><strong>Business Software:</strong> Microsoft Office (Excel, Outlook, PowerPoint, Word, Teams),
-                    Google (Sheets, Docs)</p>
-            </div>
+            <div class="RightColumn">
+                <div class="ResumeSection">
+                    <h2>Education</h2>
+                    <p><strong>Drexel University</strong> - Philadelphia, PA</p>
+                    <p>Bachelor of Science in User Experience and Interaction Design | GPA: 3.42</p>
+                </div>
 
+                <div class="ResumeSection">
+                    <h2>Skills</h2>
+                    <p><strong>UX/UI Skills:</strong> Wireframes, personas, prototyping, usability testing, development</p>
+                    <p><strong>Design Software/Programs:</strong> Adobe Suite (Photoshop, Illustrator, After Effects), Figma, Canva</p>
+                    <p><strong>Programming Languages:</strong> PHP, Java, Python, HTML, CSS</p>
+                    <p><strong>Business Software:</strong> Microsoft Office (Excel, Outlook, PowerPoint, Word, Teams), Google (Sheets, Docs)</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="resume-cta">
+            <a class="resume-pdf-link" href="media/Christopher Straface Drexel Resume.pdf" target="_blank" rel="noopener noreferrer">View PDF Version</a>
         </div>
+    </main>
 
-    </div>
-
-    <a href="media/Christopher Straface Drexel Resume.pdf" target="_blank">
-        <button>View PDF Version</button>
-    </a>
-
-    <!-- Script that contains functions for toggling navigation menu, dark mode, and having dark mode stay toggled on/off while visiting different pages -->
     <script>
         function toggleDarkMode(isEnabled) {
-    document.body.classList.toggle('dark-mode', isEnabled);
-    localStorage.setItem('darkMode', isEnabled ? 'on' : 'off');
-}
+            document.body.classList.toggle('dark-mode', isEnabled);
+            localStorage.setItem('darkMode', isEnabled ? 'on' : 'off');
+        }
 
-function applyDarkModePreference() {
-    const darkMode = localStorage.getItem('darkMode') === 'on';
-    document.body.classList.toggle('dark-mode', darkMode);
-    document.getElementById('darkModeToggle').checked = darkMode;
-}
+        function applyDarkModePreference() {
+            const stored = localStorage.getItem('darkMode');
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const darkMode = stored !== null ? stored === 'on' : systemPrefersDark;
 
-document.addEventListener('DOMContentLoaded', function () {
-    applyDarkModePreference();
-    const toggle = document.getElementById('darkModeToggle');
-    if (toggle) {
-        toggle.addEventListener('change', function (e) {
-            toggleDarkMode(e.target.checked);
+            if (stored === null) {
+                localStorage.setItem('darkMode', darkMode ? 'on' : 'off');
+            }
+
+            document.body.classList.toggle('dark-mode', darkMode);
+            const toggle = document.getElementById('darkModeToggle');
+            if (toggle) {
+                toggle.checked = darkMode;
+            }
+        }
+
+        function toggleDyslexiaMode(isEnabled) {
+            document.body.classList.toggle('dyslexia-mode', isEnabled);
+            localStorage.setItem('dyslexiaMode', isEnabled ? 'on' : 'off');
+            const dyslexiaButton = document.getElementById('dyslexiaToggle');
+            if (dyslexiaButton) {
+                dyslexiaButton.setAttribute('aria-pressed', isEnabled ? 'true' : 'false');
+            }
+        }
+
+        function applyDyslexiaModePreference() {
+            const dyslexiaMode = localStorage.getItem('dyslexiaMode') === 'on';
+            document.body.classList.toggle('dyslexia-mode', dyslexiaMode);
+            const dyslexiaButton = document.getElementById('dyslexiaToggle');
+            if (dyslexiaButton) {
+                dyslexiaButton.setAttribute('aria-pressed', dyslexiaMode ? 'true' : 'false');
+                dyslexiaButton.classList.toggle('active', dyslexiaMode);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            applyDarkModePreference();
+            applyDyslexiaModePreference();
+
+            const toggle = document.getElementById('darkModeToggle');
+            if (toggle) {
+                toggle.addEventListener('change', function (e) {
+                    toggleDarkMode(e.target.checked);
+                });
+                toggle.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        toggle.checked = !toggle.checked;
+                        toggleDarkMode(toggle.checked);
+                    }
+                });
+            }
+
+            const dyslexiaToggle = document.getElementById('dyslexiaToggle');
+            if (dyslexiaToggle) {
+                dyslexiaToggle.addEventListener('click', function () {
+                    const isEnabled = !document.body.classList.contains('dyslexia-mode');
+                    toggleDyslexiaMode(isEnabled);
+                    dyslexiaToggle.classList.toggle('active', isEnabled);
+                });
+            }
+
+            const dropdownToggle = document.querySelector('.dropdown-toggle');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            if (dropdownToggle && dropdownMenu) {
+                dropdownToggle.addEventListener('click', function () {
+                    const isOpen = dropdownMenu.classList.contains('open');
+                    dropdownMenu.classList.toggle('open', !isOpen);
+                    dropdownToggle.setAttribute('aria-expanded', String(!isOpen));
+                    dropdownMenu.setAttribute('aria-hidden', String(isOpen));
+                });
+
+                document.addEventListener('click', function (e) {
+                    if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                        dropdownMenu.classList.remove('open');
+                        dropdownToggle.setAttribute('aria-expanded', 'false');
+                        dropdownMenu.setAttribute('aria-hidden', 'true');
+                    }
+                });
+            }
+
+            const hamburger = document.getElementById('navHamburger');
+            const mainNav = document.getElementById('mainNav');
+            if (hamburger && mainNav) {
+                hamburger.addEventListener('click', function () {
+                    const isOpen = mainNav.classList.contains('open');
+                    mainNav.classList.toggle('open', !isOpen);
+                    hamburger.setAttribute('aria-expanded', String(!isOpen));
+                    hamburger.textContent = isOpen ? '\u2630' : '\u2715';
+                    hamburger.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
+                });
+            }
         });
-    }
-});
-</script>
+    </script>
 </body>
 
 </html>
