@@ -1470,7 +1470,10 @@ body.dark-mode .caseStudy2 {
 }
 
 .caseStudy3::before {
-    background-image: url('media/WebsiteLogo.png');
+    background-image: none;
+}
+.caseStudy3 {
+    background-color: #b26a48;
 }
 
 .caseStudy4::before {
