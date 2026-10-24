@@ -1461,13 +1461,13 @@ body.dark-mode .dyslexia-button.active:hover {
     background-color: #A0522D;
 }
 
-body.dark-mode .caseStudy1 {
+/* body.dark-mode .caseStudy1 {
     background-color: #D2691E;
 }
 
 body.dark-mode .caseStudy2 {
     background-color: #B8860B;
-}
+} */
 
 .caseStudy3::before {
     background-image: none;
@@ -1476,12 +1476,30 @@ body.dark-mode .caseStudy2 {
     background-color: #b26a48;
 }
 
+body.dark-mode .caseStudy3 {
+    background-color: #b26a48;
+}
+
 .caseStudy4::before {
-    background-image: url('media/Sobobatage.png');
+    background-image: none;
+}
+.caseStudy4 {
+    background-color: #ce8969;
+}
+
+body.dark-mode .caseStudy4 {
+    background-color: #ce8969;
 }
 
 .caseStudy5::before {
-    background-image: url('media/moon.png');
+    background-image: none;
+}
+.caseStudy5 {
+    background-color: #ab6f07;
+}
+
+body.dark-mode .caseStudy5 {
+    background-color: #755e03;
 }
 
 .caseStudy6::before {
